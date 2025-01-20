@@ -15,6 +15,7 @@ const CategoryCard = ({ category }: Props) => {
         flexDirection: "column",
         alignItems: "center",
         minWidth: "20rem",
+        direction: "rtl", // تنظیم جهت راست به چپ
       }}
     >
       <Image
@@ -29,11 +30,15 @@ const CategoryCard = ({ category }: Props) => {
           marginBottom: "1rem",
           textTransform: "uppercase",
           fontSize: "1.5rem",
+          textAlign: "right", // متن راست‌چین
         }}
       >
         {category}
       </Typography>
-      <Link href={`/${category}`} style={{ color: "#8f8f8f" }}>
+      <Link
+        href={`/${category}`}
+        style={{ color: "#8f8f8f", textAlign: "right" }}
+      >
         SHOP
       </Link>
       <Box
