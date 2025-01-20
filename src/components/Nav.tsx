@@ -2,7 +2,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import Container from "@mui/material/Container";
 import Link from "next/link";
-// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Cart from "./Cart";
 import Image from "next/image";
 import { useState } from "react";
@@ -16,6 +15,7 @@ const Nav = () => {
         color: "white",
         backgroundColor: "black",
         padding: "2rem 0",
+        direction: "rtl", // برای راست‌چین شدن کل محتوا
       }}
     >
       <Container
@@ -26,19 +26,29 @@ const Nav = () => {
         }}
       >
         <Typography sx={{ fontSize: "2xl" }}>NEXTSHOP</Typography>
-        <ul style={{ textTransform: "uppercase", textDecoration: "none" }}>
-          <Link style={{ marginRight: "2rem", fontWeight: "700" }} href="/">
-            Home
-          </Link>
-          <Link style={{ marginRight: "2rem", fontWeight: "700" }} href="/">
-            Headphone
-          </Link>
-          <Link style={{ marginRight: "2rem", fontWeight: "700" }} href="/">
-            Speaker
-          </Link>
-          <Link style={{ marginRight: "2rem", fontWeight: "700" }} href="/">
-            Airphone
-          </Link>
+        <ul
+          style={{
+            textTransform: "uppercase",
+            textDecoration: "none",
+            display: "flex",
+            flexDirection: "row-reverse", // ترتیب لینک‌ها راست به چپ
+            padding: 0,
+            margin: 0,
+            listStyle: "none",
+          }}
+        >
+          <li style={{ marginLeft: "2rem", fontWeight: "700" }}>
+            <Link href="/">Home</Link>
+          </li>
+          <li style={{ marginLeft: "2rem", fontWeight: "700" }}>
+            <Link href="/">Headphone</Link>
+          </li>
+          <li style={{ marginLeft: "2rem", fontWeight: "700" }}>
+            <Link href="/">Speaker</Link>
+          </li>
+          <li style={{ marginLeft: "2rem", fontWeight: "700" }}>
+            <Link href="/">Airphone</Link>
+          </li>
         </ul>
         <Button onClick={() => setShowCart(!showCart)}>
           <Image
@@ -48,7 +58,6 @@ const Nav = () => {
             height={30}
           />
         </Button>
-        {/* <ShoppingCartIcon style={{ width: "30px", height: "30px" }} />  اون یکی سبد خرید */}
       </Container>
       {showCart && <Cart />}
     </Box>

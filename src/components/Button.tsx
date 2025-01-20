@@ -1,3 +1,4 @@
+// کامپوننت Button با پشتیبانی راست‌چین
 import MuiButton from "@mui/material/Button";
 interface props {
   color: string;
@@ -15,6 +16,7 @@ const Button = ({ color, variant, children, sx }: props) => {
         padding: "0.5rem 1rem",
         borderRadius: 0,
         fontWeight: 800,
+        textAlign: "right", // متن دکمه راست‌چین شود
         ...sx,
       }}
       variant={variant}

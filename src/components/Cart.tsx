@@ -13,12 +13,13 @@ const Cart = () => {
         width: "99.2vw",
         backgroundColor: "rgba(0,0,0,0.5)",
         top: 120,
+        direction: "rtl", // برای راست‌چین شدن کل محتوا
       }}
     >
       <Box
         sx={{
           position: "absolute",
-          right: 400,
+          left: 400, // تغییر جهت برای راست‌چین
           top: 20,
           minHeight: "20vh",
           width: "20vw",
@@ -52,7 +53,7 @@ const Cart = () => {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                marginLeft: "1rem",
+                marginRight: "1rem", // تغییر به marginRight برای راست‌چین
               }}
             >
               <Typography variant="body1">Headphone z</Typography>
@@ -65,7 +66,7 @@ const Cart = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "flex-end",
+              alignItems: "flex-start", // تغییر جهت متن برای راست‌چین
             }}
           >
             <Typography sx={{ fontSize: "0.75rem" }}>Count</Typography>
