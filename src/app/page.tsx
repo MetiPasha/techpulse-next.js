@@ -3,10 +3,10 @@ import Nav from "../components/Nav";
 import { Container } from "@mui/material";
 import Hero from "../components/Hero";
 import CategoryCardContainer from "@/components/CategoryCardContainer";
-
 import ZX7Speaker from "@/components/home/ZX7Speaker";
 import YX1Earphones from "@/components/home/YX1Earphones";
 import ZX9Speaker from "@/components/home/ZSpeaker";
+import Footer from "@/components/shared/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +29,7 @@ const Home: NextPage = () => {
       <ZX9Speaker />
       <ZX7Speaker />
       <YX1Earphones />
+      <Footer />
     </div>
   );
 };
