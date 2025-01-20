@@ -1,8 +1,11 @@
 import type { NextPage } from "next";
 import Nav from "../components/Nav";
-import { Box, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import Hero from "../components/Hero";
 import CategoryCardContainer from "@/components/CategoryCardContainer";
+import ZX9Speaker from "@/components/home/Zx9speaker";
+import ZX7Speaker from "@/components/home/ZX7Speaker";
+import YX1Earphones from "@/components/home/YX1Earphones";
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +25,9 @@ const Home: NextPage = () => {
         </Container>
       </div>
       <CategoryCardContainer />
+      <ZX9Speaker />
+      <ZX7Speaker />
+      <YX1Earphones />
     </div>
   );
 };
