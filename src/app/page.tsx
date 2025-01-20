@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Nav from "../components/Nav";
 import { Box, Container } from "@mui/material";
 import Hero from "../components/Hero";
+import CategoryCardContainer from "@/components/CategoryCardContainer";
 
 const Home: NextPage = () => {
   return (
@@ -20,11 +21,7 @@ const Home: NextPage = () => {
           <Hero />
         </Container>
       </div>
-      <Box sx={{ height: "30vh" }}>
-        <Container
-          sx={{ display: "flex", justifyContent: "space-between" }}
-        ></Container>
-      </Box>
+      <CategoryCardContainer />
     </div>
   );
 };
