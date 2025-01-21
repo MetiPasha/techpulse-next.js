@@ -7,7 +7,7 @@ const theme = createTheme({
   },
   palette: {
     background: {
-      default: colors.grey[300],
+      default: colors.grey[200],
     },
   },
 });
